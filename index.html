@@ -9,45 +9,49 @@
 
 <body>
     <div class="container">
-        <header>
+        <header class="content">
             <h1>Console Mixer</h1>
+            <p>Trigger messages in your browser's console</p>
         </header>
-        <hr>
         <main id="main">
-            <h2>Write</h2>
-            <div id="button-container">
-                <button id="log">Add a log</button>
-                <button id="warn">Add a warning</button>
-                <button id="error">Add an error</button>
-                <button id="debug">Add a debug</button>
-            </div>
-            <details>
-                <summary>Settings</summary>
-                <div class="details-body">
-                    <label id="custom-message">
-                        <span>Custom message</span>
-                        <input type="text" id="custom-input">
-                    </label>
-                    <label id="toggle-timestamp"><input id="timestamp-toggle" type="checkbox"> <span>Include
-                        timestamp</span></label>
+            <section class="content">
+                <h2>Write</h2>
+                <section class="sub">
+                    <button id="log">Add a log</button>
+                    <button id="warn">Add a warning</button>
+                    <button id="error">Add an error</button>
+                    <button id="debug">Add a debug</button>
+                </section>
+                <details>
+                    <summary>Settings</summary>
+                    <div class="details-body">
+                        <label id="custom-message">
+                            <span>Custom message</span>
+                            <input type="text" id="custom-input">
+                        </label>
+                        <label id="toggle-timestamp"><input id="timestamp-toggle" type="checkbox"> <span>Include
+                                timestamp</span></label>
                     </div>
                 </details>
-                
-                <hr>
+            </section>
+            <section class="content">
                 <h2>Request</h2>
-                <div id="xhr-container">
+                <section class="sub" id="xhr-container">
                     <button id="xhr">Make an XHR</button>
                     <img id="image" alt="a very good boi" />
-                </div>
-                <div class="favicon-container">
-                    <button id="favicon">Set favicon to <img id="favicon-preview" src="./favicon-clap.png" /></button>
-                </div>
-                <hr>
+                </section>
+                <section class="sub">
+                    <button id="favicon">Change favicon</button>
+                </section>
+            </section>
+            <section class="content">
                 <h2>Other</h2>
-                <button id="invalid-css">Add invalid CSS</button>
-                <style></style>
-            </main>
-            <hr>
+                <section class="sub">
+                    <button id="invalid-css">Add invalid CSS</button>
+                    <style></style>
+                </section>
+            </section>
+        </main>
         <footer>
             Made by <a href="https://seanmcp.com">SeanMcP</a>
         </footer>
