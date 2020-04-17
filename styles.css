@@ -1,58 +1,76 @@
 body {
-    font-family: Menlo, Monaco, "Source Code", monospace;
-  }
+  font-family: Menlo, Monaco, "Source Code", monospace;
+  margin: 0;
+}
+
+.container {
+  margin: 1rem;
+  padding: 1rem;
+}
+
+* {
+  margin-top: 0;
+}
   
-  hr {
-    background: transparent;
-    border: 0;
-    border-top: 2px solid rgba(0, 0, 0, 0.125);
-    height: 0;
-    margin: 2rem 0;
-  }
-  
-  button {
-    border: 2px solid rgba(0, 0, 0, 0.125);
-    border-radius: 2px;
-    cursor: pointer;
-    min-height: 48px;
-    font-family: inherit;
-    font-size: inherit;
-    font-weight: bold;
-    padding: 0 1rem;
-  }
-  
-  button#log {
-    background: lightblue;
-  }
-  
-  button#warn {
-    background: orange;
-  }
-  
-  button#error {
-    background: pink;
-  }
-  
-  button#debug { background: lightgreen }
-  
-  img#image {
-    background: whitesmoke;
-    max-height: calc(48px * 4);
-  }
-  
-  img#image:not([src]) {
-    display: none;
-  }
-  
-  #xhr-container {
-    align-items: start;
-    display: grid;
-    gap: 1rem;
-    grid-template-columns: max-content auto;
-  }
-  
-  button#xhr {
-    background-position: center;
-    background-size: cover;
-    display: flex;
-  }
+hr {
+  background: transparent;
+  border: 0;
+  border-top: 2px solid rgba(0, 0, 0, 0.125);
+  height: 0;
+  margin: 2rem 0;
+}
+
+footer {
+  text-align: center;
+}
+
+button {
+  border: 2px solid rgba(0, 0, 0, 0.125);
+  border-radius: 2px;
+  cursor: pointer;
+  display: inline-grid;
+  min-height: 48px;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: bold;
+  place-content: center;
+  padding: 0 1rem;
+}
+
+label#toggle-timestamp {
+  display: grid;
+  align-items: center;
+  gap: 0.5rem;
+  grid-template-columns: max-content auto;
+  margin-bottom: 1rem;
+}
+
+button#log {
+  background: lightblue;
+}
+
+button#warn {
+  background: gold;
+}
+
+button#error {
+  background: pink;
+}
+
+button#debug { background: lightgreen }
+
+img#image {
+  background: whitesmoke;
+  max-height: calc(48px * 4);
+}
+
+img#image:not([src]) {
+  display: none;
+}
+
+#xhr-container {
+  align-items: start;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: max-content auto;
+}
