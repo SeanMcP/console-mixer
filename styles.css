@@ -3,21 +3,27 @@ body {
   margin: 0;
 }
 
+* {
+  margin-top: 0;
+}
+
 .container {
   margin: 1rem;
   padding: 1rem;
 }
 
-* {
-  margin-top: 0;
+header, .content {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.125);
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
 }
-  
-hr {
-  background: transparent;
-  border: 0;
-  border-top: 2px solid rgba(0, 0, 0, 0.125);
-  height: 0;
-  margin: 2rem 0;
+
+.details-body *:last-child, .content *:last-child {
+  margin-bottom: 0;
+}
+
+section.sub {
+  margin-bottom: 1rem;
 }
 
 footer {
@@ -64,10 +70,6 @@ button#error { background: pink }
 
 button#debug { background: lightgreen }
 
-div#button-container {
-  margin-bottom: 1rem;
-}
-
 details[open] summary {
   border-bottom: 2px solid black;
 }
@@ -79,10 +81,6 @@ summary {
 .details-body {
   box-shadow: inset 0 0 0.5rem rgba(0, 0, 0, 0.125);
   padding: 1rem;
-}
-
-.details-body *:last-child {
-  margin-bottom: 0;
 }
 
 img#image {
@@ -106,7 +104,6 @@ img#image:not([src]) {
   display: grid;
   gap: 1rem;
   grid-template-columns: max-content auto;
-  margin-bottom: 1rem;
 }
 
 /*
