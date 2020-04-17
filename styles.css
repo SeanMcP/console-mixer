@@ -87,7 +87,14 @@ summary {
 
 img#image {
   background: whitesmoke;
-  max-height: calc(48px * 4);
+  border-radius: 2px;
+  max-height: 48px;
+  transition: all 200ms ease-in-out;
+}
+
+img#image:hover {
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.375);
+  transform: scale(3);
 }
 
 img#image:not([src]) {
