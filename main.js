@@ -22,3 +22,19 @@ document.getElementById('xhr').addEventListener('click', async () => {
         imageEl.src = src
     }
 })
+
+const faviconReverseMap = {
+    'favicon-slider.png': 'favicon-clap.png',
+    'favicon-clap.png': 'favicon-slider.png',
+}
+
+const faviconLink = document.querySelector('link[rel="shortcut icon"]')
+const faviconPreview = document.getElementById('favicon-preview')
+
+document.getElementById('favicon').addEventListener('click', () => {
+    const { href: oldHref } = faviconLink
+    const oldFavicon = oldHref.slice(oldHref.lastIndexOf('/') + 1)
+    const newFavicon = faviconReverseMap[oldFavicon]
+    faviconLink.href = newFavicon
+    faviconPreview.src = oldFavicon
+})

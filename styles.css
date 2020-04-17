@@ -99,4 +99,20 @@ img#image:not([src]) {
   display: grid;
   gap: 1rem;
   grid-template-columns: max-content auto;
+  margin-bottom: 1rem;
+}
+
+/*
+  Chrome can't handle buttons with grid, so flex box here
+  Link: https://stackoverflow.com/questions/51815477/is-a-button-allowed-to-have-displaygrid
+*/
+#favicon {
+  align-items: center;
+  display: flex;
+}
+
+img#favicon-preview {
+  margin-left: 1rem;
+  height: 16px;
+  width: 16px;
 }
