@@ -24,25 +24,36 @@ footer {
   text-align: center;
 }
 
-button {
-  border: 2px solid rgba(0, 0, 0, 0.125);
-  border-radius: 2px;
-  cursor: pointer;
-  display: inline-grid;
-  min-height: 48px;
+/* Reset */
+button, input {
   font-family: inherit;
   font-size: inherit;
-  font-weight: bold;
-  place-content: center;
+}
+
+button, input {
+  border: 2px solid rgba(0, 0, 0, 0.125);
+  border-radius: 2px;
+  min-height: 48px;
   padding: 0 1rem;
 }
 
-label#toggle-timestamp {
+button {
+  background: #ddd;
+  cursor: pointer;
+  display: inline-grid;
+  font-weight: bold;
+  place-content: center;
+}
+
+label {
   display: grid;
-  align-items: center;
   gap: 0.5rem;
-  grid-template-columns: max-content auto;
   margin-bottom: 1rem;
+}
+
+label#toggle-timestamp {
+  align-items: center;
+  grid-template-columns: max-content auto;
 }
 
 button#log {

@@ -1,11 +1,17 @@
 const timestampToggle = document.getElementById('timestamp-toggle')
+const customInput = document.getElementById('custom-input')
 
 function getTime() {
-    return new Date().toLocaleTimeString()
+    // Someone teach me to do this better
+    const now = new Date()
+    return new Date().toLocaleTimeString().split(' ')[0] + `.${now.getMilliseconds()}`
 }
 
 ['log', 'warn', 'error', 'debug'].forEach(type => {
-    document.getElementById(type).addEventListener('click', () => console[type](timestampToggle.checked ? `[${getTime()}] ${type}` : type))
+    document.getElementById(type).addEventListener('click', () => {
+        const message = customInput.value ? customInput.value : type
+        console[type](timestampToggle.checked ? `[${getTime()}] ${message}` : message)
+    })
 })
 
 const imageEl = document.getElementById('image')
