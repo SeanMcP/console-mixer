@@ -11,18 +11,25 @@
         <header>
             <h1>Console Mixer</h1>
         </header>
+        <hr>
         <main id="main">
-            <label id="custom-message">
-                <span>Custom message</span>
-                <input type="text" id="custom-input">
-            </label>
-            <label id="toggle-timestamp"><input id="timestamp-toggle" type="checkbox" checked> <span>Include timestamp</span></label>
-            <div>
+            <div id="button-container">
                 <button id="log">Add a log</button>
                 <button id="warn">Add a warning</button>
                 <button id="error">Add an error</button>
                 <button id="debug">Add a debug</button>
             </div>
+            <details>
+                <summary>Settings</summary>
+                <div class="details-body">
+                    <label id="custom-message">
+                        <span>Custom message</span>
+                        <input type="text" id="custom-input">
+                    </label>
+                    <label id="toggle-timestamp"><input id="timestamp-toggle" type="checkbox" checked> <span>Include
+                            timestamp</span></label>
+                </div>
+            </details>
 
             <hr>
 

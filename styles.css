@@ -56,19 +56,34 @@ label#toggle-timestamp {
   grid-template-columns: max-content auto;
 }
 
-button#log {
-  background: lightblue;
-}
+button#log { background: lightblue }
 
-button#warn {
-  background: gold;
-}
+button#warn { background: gold }
 
-button#error {
-  background: pink;
-}
+button#error { background: pink }
 
 button#debug { background: lightgreen }
+
+div#button-container {
+  margin-bottom: 1rem;
+}
+
+details[open] summary {
+  border-bottom: 2px solid black;
+}
+
+summary {
+  padding: 1rem 0;
+}
+
+.details-body {
+  box-shadow: inset 0 0 0.5rem rgba(0, 0, 0, 0.125);
+  padding: 1rem;
+}
+
+.details-body *:last-child {
+  margin-bottom: 0;
+}
 
 img#image {
   background: whitesmoke;
