@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Console Mixer</title>
+    <title>Console Mixer by SeanMcP</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -12,10 +12,13 @@
             <h1>Console Mixer</h1>
         </header>
         <main id="main">
-            <button id="log">Add a log</button>
-            <button id="warn">Add a warning</button>
-            <button id="error">Add an error</button>
-            <button id="debug">Add a debug</button>
+            <label id="toggle-timestamp"><input id="timestamp-toggle" type="checkbox" checked> <span>Include timestamp</span></label>
+            <div>
+                <button id="log">Add a log</button>
+                <button id="warn">Add a warning</button>
+                <button id="error">Add an error</button>
+                <button id="debug">Add a debug</button>
+            </div>
 
             <hr>
 
@@ -26,6 +29,10 @@
 
             <hr>
         </main>
+        <hr>
+        <footer>
+            Made by <a href="https://seanmcp.com">SeanMcP</a>
+        </footer>
     </div>
 </body>
 <script src="main.js"></script>
