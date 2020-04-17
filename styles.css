@@ -123,3 +123,27 @@ img#favicon-preview {
   height: 16px;
   width: 16px;
 }
+
+style[contenteditable] {
+  --background: whitesmoke;
+  --highlight: orange;
+  background: var(--background);
+  border: 2px solid var(--highlight);
+  border-radius: 2px;
+  padding: 1rem;
+  position: relative;
+  display: block;
+  margin-top: 1rem;
+}
+
+style[contenteditable]::before {
+  background: var(--highlight);
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  bottom: 100%;
+  content: 'Editable styles';
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  position: absolute;
+  right: 0.5rem;
+}

@@ -39,3 +39,19 @@ document.getElementById('favicon').addEventListener('click', () => {
     faviconLink.href = newFavicon
     faviconPreview.src = oldFavicon
 })
+
+const styleTag = document.querySelector('style')
+const styleReverseMap = {
+    '* { color: pomegranate }': '* { font-color: darkslateblue }',
+    '* { font-color: darkslateblue }': '* { color: pomegranate }'
+}
+
+document.getElementById('invalid-css').addEventListener('click', () => {
+    let { innerHTML: styles } = styleTag
+    let newStyles = '* { color: pomegranate }'
+    if (styles && styleReverseMap[styles]) {
+        newStyles = styleReverseMap[styles]
+    }
+    styleTag.contentEditable = true
+    styleTag.innerHTML = newStyles
+})
