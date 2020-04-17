@@ -1,18 +1,19 @@
+import { getTime } from './utils.js'
+
 const timestampToggle = document.getElementById('timestamp-toggle')
 const customInput = document.getElementById('custom-input')
 
-function getTime() {
-    // Someone teach me to do this better
-    const now = new Date()
-    return new Date().toLocaleTimeString().split(' ')[0] + `.${now.getMilliseconds()}`
+function buildMessage(type) {
+    let output = type
+    if (timestampToggle.checked) output = `[${getTime()}] ` + output
+    if (customInput.value) output += `: ${customInput.value}`
+    return output
 }
 
-['log', 'warn', 'error', 'debug'].forEach(type => {
-    document.getElementById(type).addEventListener('click', () => {
-        const message = customInput.value ? customInput.value : type
-        console[type](timestampToggle.checked ? `[${getTime()}] ${message}` : message)
-    })
-})
+document.getElementById('log').addEventListener('click', () => console.log(buildMessage('log')))
+document.getElementById('warn').addEventListener('click', () => console.warn(buildMessage('warn')))
+document.getElementById('error').addEventListener('click', () => console.error(buildMessage('error')))
+document.getElementById('debug').addEventListener('click', () => console.debug(buildMessage('debug')))
 
 const imageEl = document.getElementById('image')
 document.getElementById('xhr').addEventListener('click', async () => {
