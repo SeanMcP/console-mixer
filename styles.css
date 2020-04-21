@@ -62,11 +62,13 @@ label#toggle-timestamp {
   grid-template-columns: max-content auto;
 }
 
-button#log { background: lightblue }
+button#log { background: transparent }
 
 button#warn { background: gold }
 
 button#error { background: pink }
+
+button#info { background: lightblue }
 
 button#debug { background: lightgreen }
 

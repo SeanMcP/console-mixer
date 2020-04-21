@@ -14,6 +14,7 @@ document.getElementById('log').addEventListener('click', () => console.log(build
 document.getElementById('warn').addEventListener('click', () => console.warn(buildMessage('warn')))
 document.getElementById('error').addEventListener('click', () => console.error(buildMessage('error')))
 document.getElementById('debug').addEventListener('click', () => console.debug(buildMessage('debug')))
+document.getElementById('info').addEventListener('click', () => console.info(buildMessage('info')))
 
 const imageEl = document.getElementById('image')
 document.getElementById('xhr').addEventListener('click', async () => {
