@@ -16,6 +16,28 @@ document.getElementById('error').addEventListener('click', () => console.error(b
 document.getElementById('debug').addEventListener('click', () => console.debug(buildMessage('debug')))
 document.getElementById('info').addEventListener('click', () => console.info(buildMessage('info')))
 
+// Console group
+
+const groupContent = {
+    greeting: "Hello",
+    greet() {
+        console.log(this.greeting + ' ' + this.name)
+    },
+    name: "YouTube!",
+}
+
+document.getElementById('open-group').addEventListener('click', () => {
+    console.group('Open group' + (customInput.value ? `: ${customInput.value}` : ''))
+    console.log(groupContent)
+    console.groupEnd()
+})
+
+document.getElementById('collapsed-group').addEventListener('click', () => {
+    console.groupCollapsed('Collapsed group' + (customInput.value ? `: ${customInput.value}` : ''))
+    console.log(groupContent)
+    console.groupEnd()
+})
+
 const imageEl = document.getElementById('image')
 document.getElementById('xhr').addEventListener('click', async () => {
     const response = await fetch('https://dog.ceo/api/breeds/image/random')
