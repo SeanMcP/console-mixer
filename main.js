@@ -61,13 +61,13 @@ document.getElementById('favicon').addEventListener('click', () => {
 
 const styleTag = document.querySelector('style')
 const styleReverseMap = {
-    '* { color: pomegranate }': '* { font-color: darkslateblue }',
-    '* { font-color: darkslateblue }': '* { color: pomegranate }'
+    'p { background-color: pomegranate }': 'p { font-color: darkslateblue }',
+    'p { font-color: darkslateblue }': 'p { background-color: pomegranate }'
 }
 
 document.getElementById('invalid-css').addEventListener('click', () => {
     let { innerHTML: styles } = styleTag
-    let newStyles = '* { color: pomegranate }'
+    let newStyles = 'p { background-color: pomegranate }'
     if (styles && styleReverseMap[styles]) {
         newStyles = styleReverseMap[styles]
     }
