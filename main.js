@@ -27,7 +27,7 @@ const groupContent = {
     greet() {
         console.log(this.greeting + ' ' + this.name)
     },
-    name: "YouTube!",
+    name: "World!",
 }
 
 document.getElementById('open-group').addEventListener('click', () => {
