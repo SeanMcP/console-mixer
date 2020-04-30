@@ -151,3 +151,25 @@ style[contenteditable]::before {
   position: absolute;
   right: 0.5rem;
 }
+
+button#super {
+  --size: 3.5rem;
+  border-radius: var(--size);
+  bottom: 1rem;
+  box-shadow: 0 0.25rem 0.5rem hsla(0, 0%, 0%, 0.125);
+  display: grid;
+  height: var(--size);
+  place-items: center;
+  position: fixed;
+  right: 1rem;
+  width: var(--size);
+}
+
+button#super:focus span,
+button#super:hover span {
+  transform: rotate(25deg);
+}
+
+button#super:active span {
+  transform: scale(1.25);
+}

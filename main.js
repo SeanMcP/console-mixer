@@ -3,6 +3,10 @@ import { getTime } from './utils.js'
 const timestampToggle = document.getElementById('timestamp-toggle')
 const customInput = document.getElementById('custom-input')
 
+document.getElementById('super').addEventListener('click', () => {
+    document.querySelectorAll('button:not([data-super-ignore="true"])').forEach(node => node.click())
+})
+
 function buildMessage(type) {
     let output = type
     if (timestampToggle.checked) output = `[${getTime()}] ` + output
